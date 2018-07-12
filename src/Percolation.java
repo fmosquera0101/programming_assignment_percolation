@@ -1,13 +1,22 @@
+import edu.princeton.cs.algs4.WeightedQuickUnionUF;
+
 
 
 public class Percolation {
 	
 	int n;
+	boolean [][] grid;
 	// create n-by-n grid, with all sites blocked
 	public Percolation(int n){
 		this.n = n;
 		if(n <= 0){
 			throw new IllegalArgumentException("N can't be <= 0");
+		}
+		grid = new boolean [n][n];
+		for(int i = 0; i < n; i++){
+			for(int j = 0; j < n; j++){
+				grid[i][j] = false;
+			}
 		}
 		
 	}
@@ -38,6 +47,8 @@ public class Percolation {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		WeightedQuickUnionUF weightedQuickUnionUF = new WeightedQuickUnionUF(n);
+		
 
 	}
 
