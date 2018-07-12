@@ -1,4 +1,4 @@
-package programming_assignment_percolation;
+
 
 public class Percolation {
 	
